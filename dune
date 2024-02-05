@@ -1,0 +1,10 @@
+(executable
+ (package getdents)
+ (public_name getdents)
+ (name getdents)
+ (flags -g :standard -bin-annot -w -6-7-9-27-32-33-34-35-36-50-52 -no-strict-sequence -linkall)
+ (libraries lwt lwt.unix)
+ (preprocess (pps lwt_ppx))
+ (foreign_stubs (language c) (names unix_getdents))
+)
+
